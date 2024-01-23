@@ -1,0 +1,2 @@
+# exercises
+Php programming exercises
