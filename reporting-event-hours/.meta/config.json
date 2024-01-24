@@ -1,0 +1,18 @@
+{
+	"authors": [
+	  "Klorinmannen"
+	],
+	"contributors": [],
+	"files": {
+	  "solution": [
+		"ReportingHours.php"
+	  ],
+	  "test": [
+		"ReportingHoursTest.php"
+	  ],
+	  "example": [
+		".meta/example.php"
+	  ]
+	},
+	"blurb": ""
+  }
