@@ -1,0 +1,12 @@
+{
+    "name": "klorinmannen/exercises",
+    "description": "Exercises",
+    "authors": [
+        {
+            "name": "Jonatan Fransson"
+        }
+    ],
+    "require-dev": {
+		"phpunit/phpunit": "*"
+    }
+}

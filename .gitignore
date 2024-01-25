@@ -1,0 +1,6 @@
+
+vendor/
+
+# Ignore crap files.
+**/*.*~
+**/*#*
