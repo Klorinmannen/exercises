@@ -3,7 +3,7 @@ A list of PHP programming exercises with inspiration from my every day work.
 
 ## reverse-vat
 Some systems tend to send product prices as gross prices and you just need to know that net price.  
-**Given the gross price of a product and the vat percentage, calculate the original net price of the product.**
+**Given the gross price of a product and the vat percentage, calculate the original net price & vat of the product.**
 
 ## normalize-phone-numbers
 Phone numbers are wild. And they have to be normalized if you want to automate snom-phones and make calling clients easier.  
