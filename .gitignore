@@ -1,5 +1,10 @@
+/*
 
-/vendor
+!/reverse-vat
+!/ocr-checksum
+!/normalize-phone-numbers
+!/name-presentation
+!/calendar-event-hours
 
 # Ignore crap files.
 **/*.*~
