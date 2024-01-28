@@ -6,6 +6,6 @@ class Name
 {
 	public static function format(string $firstname, string $lastname, string $username): string
 	{
-		throw new \BadFunctionCallException('Implement the formatName function');
+		throw new \BadFunctionCallException('Implement the Name::format function');
 	}
 }
