@@ -40,7 +40,7 @@ The customer has a few requirements, or rules, for all hours found in the events
   - Hours between 18:00 and midnight are multiplied by 2.
 - Events spanning multiple days should make use of the same rules for half, full day and overtime rules.
   - The days between starting day and ending day are counted under the full day rule.
-- Work day starts at 08:00.
+- Work day starts at 09:00.
 - No special treatment for weekends, treated as weekdays.
 
 ## Note
