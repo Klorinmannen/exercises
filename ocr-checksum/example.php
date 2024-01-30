@@ -8,6 +8,18 @@ class OCR
 	{			
 		$OCR = str_replace([' ', '#'], '', $OCR);
 
+		if (!static::verifyLengthAndDigits($OCR))
+			return false;
+		
+		$OCRWithoutChecksum = substr($OCR, 0, -1);
+		
+		$checksum = static::luhnAlgorithm($OCRWithoutChecksum);
+		$OCRChecksum = substr($OCR, -1);
+		return $checksum == $OCRChecksum;
+	}
+
+	public static function verifyLengthAndDigits(string $OCR): bool
+	{
 		$OCRLength = strlen($OCR);
 		if ($OCRLength < 5 || $OCRLength > 15)
 			return false;
@@ -20,11 +32,15 @@ class OCR
 		$length = substr($OCR, -2, 1);
 		if ($actualOCRLength != $length) 
 			return false;
-		
-		$strippedOCR = substr($OCR, 0, -1);
-		$reverseOCR = strrev($strippedOCR);
+
+		return true;
+	}
+
+	public static function luhnAlgorithm(string $OCRWithoutChecksum): int
+	{
+		$reverseOCR = strrev($OCRWithoutChecksum);
 		$OCRDigits = str_split($reverseOCR);
-	
+
 		$sum = 0;
 		foreach ($OCRDigits as $index => $digit) {
 			if ($index % 2 == 0) {
@@ -35,9 +51,9 @@ class OCR
 			} else
 				$sum += $digit;
 		}
-	
-		$OCRChecksum = substr($OCR, -1);
+		
 		$checksum = (10 - ($sum % 10)) % 10;
-		return $checksum == $OCRChecksum;
+		
+		return $checksum;
 	}
 }
