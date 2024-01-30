@@ -10,7 +10,7 @@ class NameTest extends TestCase
 
 	public static function setUpBeforeClass(): void
 	{
-		require_once 'Name.php';
+		require_once 'example.php';
 	}
 
 	public static function formatProvider(): array
@@ -18,15 +18,16 @@ class NameTest extends TestCase
 		return [
 			'Empty' => [ '', '', '', '-' ],
 			'Only space' => [ ' ', ' ', ' ', '-' ],
-			'Fullname' => [ 'John', 'Doe', 'john@example.com', 'John D' ],
-			'Only firstname' => [ 'Jane', '', 'jane@example.com', 'Jane' ],
+			'Fullname' => [ 'John', 'doe', 'john@example.com', 'John D' ],
+			'Only firstname' => [ 'jane', '', 'jane@example.com', 'Jane' ],
 			'Only lastname' => [ '', 'Hancock', 'hancock@example.com', 'Hancock' ],
 			'Names with spaces' => [ ' John ', ' Doe ', 'john@example.com', 'John D' ],
 			'Username' => [ '', '', ' john.doe86@example.com ', 'john.doe86' ],
-			'Swedish fullname' => [ 'Örjan', 'Åkesson', '', 'Örjan Å' ],
+			'Swedish fullname' => [ 'Örjan', 'åkesson', '', 'Örjan Å' ],
 			'Norwegian fullname' => [ 'Ole Gunnar', 'Solskjær', '', 'Ole Gunnar S' ],
-			'German lastname' => [ '', 'Müller', '', 'Müller' ],
-			'Spanish firstname' => [ 'Úrsula ', '', '', 'Úrsula' ]
+			'German lastname' => [ '', 'Müller martin', '', 'Müller Martin' ],
+			'Spanish firstname' => [ 'Úrsula ', '', '', 'Úrsula' ],
+			'Strange' => [ '19', '86', '', '19 8']
 		];
 	}
 
