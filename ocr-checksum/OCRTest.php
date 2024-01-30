@@ -9,7 +9,7 @@ class OCRTest extends TestCase
 {
 	public static function setUpBeforeClass(): void
 	{
-		require_once 'example.php';
+		require_once 'OCR.php';
 	}
 
 	public static function verifyProvider(): array
