@@ -5,7 +5,7 @@ A list of PHP programming exercises with inspiration from my every day work.
 Given the gross price of a product and the vat percentage. Calculate the net price of the product.
 
 ## normalize-phone-numbers
-Given a list of mobile phone numbers, normalize and return the list.
+Given a mobile phone number, normalize it.
 
 ## ocr-checksum
 Given an OCR reference number, verify it's length & checksum.
@@ -17,5 +17,10 @@ Implement a method extracting hours from calendar events returned by an integrat
 Implement a method formating a users name for presentation.
 
 ## data-filtering
-Filter a dataset queried from a data source on given input parameters.
+Filter a dataset queried from a data source on given input parameters and send back the result.
 
+## parse-invoice-txt-file
+Read a comma seperated invoice file and aggregate it.
+
+## request-resource-access
+Handle a http request, requesting a resource and determine if the user has access or not.

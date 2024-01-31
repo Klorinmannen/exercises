@@ -5,6 +5,9 @@
 !/normalize-phone-numbers
 !/name-presentation
 !/calendar-event-hours
+!/data-filtering
+!/parse-invoice-file
+!/request-resource-access
 
 # Ignore crap files.
 **/*.*~
