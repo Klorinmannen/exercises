@@ -8,7 +8,11 @@ class OCR
 	{			
 		$OCR = str_replace([' ', '#'], '', $OCR);
 
-		if (!static::verifyLengthAndDigits($OCR))
+		$hasOnlyDigits = preg_match('/^[0-9]+$/', $OCR) === 1;
+		if (!$hasOnlyDigits) 
+			return false;
+
+		if (!static::verifyLength($OCR))
 			return false;
 		
 		$OCRWithoutChecksum = substr($OCR, 0, -1);
@@ -18,16 +22,12 @@ class OCR
 		return $checksum == $OCRChecksum;
 	}
 
-	public static function verifyLengthAndDigits(string $OCR): bool
+	public static function verifyLength(string $OCR): bool
 	{
 		$OCRLength = strlen($OCR);
 		if ($OCRLength < 5 || $OCRLength > 15)
 			return false;
 	
-		$hasOnlyDigits = preg_match('/^[0-9]+$/', $OCR) === 1;
-		if (!$hasOnlyDigits) 
-			return false;
-		
 		$actualOCRLength = $OCRLength % 10;
 		$length = substr($OCR, -2, 1);
 		if ($actualOCRLength != $length) 
