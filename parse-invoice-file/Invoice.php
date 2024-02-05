@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-class Parse
+class Invoice
 {
-	public static function file(string $fullFileName): array
+	public static function parseFile(string $fullFileName): array
 	{
 		throw new \BadFunctionCallException('Implement the Parse::file method.');
 	}
