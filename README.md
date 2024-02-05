@@ -19,8 +19,11 @@ Implement a method formating a users name for presentation.
 ## data-filtering
 Filter a dataset queried from a data source on given input parameters and send back the result.
 
-## parse-invoice-txt-file
-Read a comma seperated invoice file and aggregate it.
+## parse-invoice-file
+Read and parse a csv invoice file and do light processing.
+
+## convert-file-format
+Read a csv file and encode it as json, converting it.
 
 ## request-resource-access
 Handle a http request, requesting a resource and determine if the user has access or not.
